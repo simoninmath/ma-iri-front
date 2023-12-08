@@ -1,8 +1,8 @@
 <h1>Liste des figurines {{ title }}</h1>
 <input 
-    type="text"
+    type="number"
     (click)="selectFig($event)" />
-<p (click)="selectFig(figTab[0])">{{ figTab[0].name }}</p>
+<p (click)="selectFig($event)">{{ figTab[0].name }}</p>
 <p>{{ figTab[1].name }}</p>
 <p>{{ figTab[2].name }}</p>
 <p>{{ figTab[3].name }}</p>
