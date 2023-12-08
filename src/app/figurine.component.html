@@ -1,8 +1,18 @@
 <h1>Liste des figurines {{ title }}</h1>
-<input 
-    type="number"
-    (click)="selectFig($event)" />
-<p (click)="selectFig($event)">{{ figTab[0].name }}</p>
+<input #input (keyup.enter)="selectFig(input.value)" type="number" />
+<br />
+<p *ngIf="figSelected">
+  Vous avez sélectionné la figurine :
+  {{ figSelected?.name }}
+</p>
+<p *ngIf="!figSelected">Aucune figurine n'a été trouvée...</p>
+<br />
+<p *ngFor="let figurine of figTab">
+  {{ figurine.name }}
+</p>
+
+<!-- <p (click)="selectFig($event)">{{ figTab[0].name }}</p> -->
+<!-- <p>{{ figTab[0].name }}</p>
 <p>{{ figTab[1].name }}</p>
 <p>{{ figTab[2].name }}</p>
 <p>{{ figTab[3].name }}</p>
@@ -13,4 +23,4 @@
 <p>{{ figTab[8].name }}</p>
 <p>{{ figTab[9].name }}</p>
 <p>{{ figTab[10].name }}</p>
-<p>{{ figTab[11].name }}</p>
+<p>{{ figTab[11].name }}</p> -->
