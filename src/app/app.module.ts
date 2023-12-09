@@ -7,6 +7,7 @@ import { BorderCardDirective } from './border-card.directive';
 import { FigurineTypeColorPipe } from './figurine-type-color.pipe';
 import { ListFigurineComponent } from './list-figurine/list-figurine.component';
 import { DetailFigurineComponent } from './detail-figurine/detail-figurine.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DetailFigurineComponent } from './detail-figurine/detail-figurine.compo
     BorderCardDirective,
     FigurineTypeColorPipe,
     ListFigurineComponent,
-    DetailFigurineComponent
+    DetailFigurineComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
