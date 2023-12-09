@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { ActivatedRoute } from "@angular/router"; // Give access to the current Route
+import { ActivatedRoute, Router } from "@angular/router"; // Give access to the current Route
 import { FIGURINES } from "../mock-figurine-list";
 import { Figurine } from "../figurine";
 
@@ -13,7 +13,7 @@ export class DetailFigurineComponent {
   figurineList: Figurine[];
   figurine: Figurine | undefined;
 
-  constructor(private route: ActivatedRoute) {} // Dependence Injection allow the Route Service disable into the Component
+  constructor(private route: ActivatedRoute, private router: Router) {} // Dependence Injection allow the Route Service disable into the Component
 
   ngOnInit() {
     this.figurineList = FIGURINES;
@@ -24,7 +24,7 @@ export class DetailFigurineComponent {
   }
 
   goToFigurineList() {
-
+    this.router.navigate(['/figurine']);
   }
 
 }
