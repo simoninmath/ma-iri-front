@@ -4,12 +4,12 @@ import { Figurine } from "./figurine";
 
 @Component({
   selector: "app-root",
-  templateUrl: "./figurine.component.html",
+  templateUrl: "./app.component.html",
 })
 
 export class AppComponent implements OnInit {
   title = "Ma'Iri";
-  figTab: Figurine[] = FIGURINES; // Type as a Table of Figurine
+  figTab: Figurine[] = FIGURINES;  // Type as a Table of Figurine
   figSelected: Figurine | undefined;
 
   ngOnInit() {

@@ -3,7 +3,7 @@
   <!-- By default, 12 col -->
   <div class="row">
     <div *ngFor="let figurine of figTab" class="col m4 s6">
-      <div class="card horizontal">
+      <div class="card horizontal" (click)="selectFig('figurine')" figBorderCard>
         <div class="card-image">
           <!-- Bond the src attribut from figTab -->
           <img [src]="figurine.picture" />
@@ -12,7 +12,7 @@
           <div class="card-content">
             <p>{{ figurine.name }}</p>
             <p>
-              <small>{{ figurine.created }}</small>
+              <small>{{ figurine.created | date | uppercase }}</small> <!-- using Date Pipe -->
             </p>
           </div>
         </div>
@@ -20,7 +20,6 @@
     </div>
   </div>
 </div>
-
 <!-- <input #input (keyup.enter)="selectFig(input.value)" type="number" />
 <br />
 <p *ngIf="figSelected">
