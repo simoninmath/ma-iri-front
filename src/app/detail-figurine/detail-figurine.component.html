@@ -1,1 +1,45 @@
-<p>detail-figurine works!</p>
+<!-- Chapitre 6 : Les Routes --> 
+<div *ngIf="figurine" class="row">
+    <div class="col s12 m8 offset-m2">
+    <h2 class="header center">{{ figurine.name }}</h2>
+    <div class="card horizontal hoverable">
+      <div class="card-image">
+        <img [src]="figurine.picture">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <table class="bordered striped">
+            <tbody>
+              <tr>
+                <td>Nom</td>
+                <td><strong>{{ figurine.name }}</strong></td>
+              </tr>
+              <tr>
+                <td>Points de vie</td>
+                <td><strong>{{ figurine.hp }}</strong></td>
+              </tr>
+              <tr>
+                <td>Dégâts</td>
+                <td><strong>{{ figurine.cp }}</strong></td>
+              </tr>
+              <tr>
+                <td>Types</td>
+                <td>
+                  <span *ngFor="let type of figurine.types" class="{{ type | figurineTypeColor }}">{{ type }}</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Date de création</td>
+                <td><em>{{ figurine.created | date:"dd/MM/yyyy" }}</em></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-action">
+          <a (click)="goToFigurineList()">Retour</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <h4 *ngIf='!figurine' class="center">Aucune figurine à afficher !</h4>
