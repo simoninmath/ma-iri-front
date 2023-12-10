@@ -26,5 +26,4 @@ export class DetailFigurineComponent {
   goToFigurineList() {
     this.router.navigate(['/figurine']);
   }
-
 }
