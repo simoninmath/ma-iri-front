@@ -8,7 +8,6 @@ import { Figurine } from "../figurine";
   templateUrl: "./detail-figurine.component.html",
   styles: [],
 })
-
 export class DetailFigurineComponent {
   figurineList: Figurine[];
   figurine: Figurine | undefined;
@@ -18,13 +17,13 @@ export class DetailFigurineComponent {
   ngOnInit() {
     this.figurineList = FIGURINES;
     const figurineId: string | null = this.route.snapshot.paramMap.get("id"); // Call the Route and take all parameters in a specific time, then get id in the URL
-    if (figurineId) {  // Condition: if a figurine was found, the id will put on this figurine
+    if (figurineId) {
+      // Condition: if a figurine was found, the id will put on this figurine
       this.figurine = this.figurineList.find((figurine) => figurine.id == +figurineId);
     }
   }
 
   goToFigurineList() {
-    this.router.navigate(['/figurine']);
+    this.router.navigate(["/figurine"]);
   }
-
 }
