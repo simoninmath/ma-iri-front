@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BorderCardDirective } from './border-card.directive';
-import { FigurineTypeColorPipe } from './figurine-type-color.pipe';
+import { FigurineTypeColorPipe } from './figurine/figurine-type-color.pipe';
 import { ListFigurineComponent } from './list-figurine/list-figurine.component';
 import { DetailFigurineComponent } from './detail-figurine/detail-figurine.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
