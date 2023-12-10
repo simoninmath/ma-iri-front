@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Figurine } from '../figurine';
 import { FIGURINES } from '../mock-figurine-list';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-figurine',
