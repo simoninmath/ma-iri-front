@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { ListFigurineComponent } from './list-figurine/list-figurine.component';
-import { DetailFigurineComponent } from './detail-figurine/detail-figurine.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
-  { path:'figurine', component: ListFigurineComponent },
-  { path:'figurine/:id', component: DetailFigurineComponent },
+const mainRoutes: Routes = [
   { path:'', redirectTo: 'figurine', pathMatch: 'full' },  // Defautl Route with pathMath to avoid "side effects"
   { path:'**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(mainRoutes)
+  ],
+  exports: [
+    RouterModule
+  ]
 })
+
 export class AppRoutingModule { }
