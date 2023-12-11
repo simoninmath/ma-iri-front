@@ -5,6 +5,7 @@ import { DetailFigurineComponent } from './detail-figurine/detail-figurine.compo
 import { BorderCardDirective } from './border-card.directive';
 import { FigurineTypeColorPipe } from './figurine-type-color.pipe';
 import { RouterModule, Routes } from '@angular/router';
+import { FigurineService } from './figurine.service';
 
 const figurineRoutes: Routes = [
   { path:'figurine', component: ListFigurineComponent },
@@ -21,7 +22,8 @@ const figurineRoutes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(figurineRoutes)
-  ]
+  ],
+  providers: [FigurineService]
 })
 
 export class FigurineModule { }

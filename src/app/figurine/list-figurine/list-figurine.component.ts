@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Figurine } from '../figurine';
-import { FIGURINES } from '../mock-figurine-list';
+import { FigurineService } from '../figurine.service';
 
 @Component({
   selector: 'app-list-figurine',
@@ -12,12 +12,19 @@ import { FIGURINES } from '../mock-figurine-list';
 
 export class ListFigurineComponent {
 
-  figList: Figurine[] = FIGURINES;  // Type as a Table of Figurine
+  figurineList: Figurine[];  // Type as a Table of Figurine
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private figurineService: FigurineService
+    ) {}
     
-  goToFigurine(figurine: Figurine) {  // Go back Method
+  goToFigurine(figurine: Figurine) {   // Go back Method
     this.router.navigate(['/figurine', figurine.id]);
   };
+
+  ngOnInit() {
+    this.figurineList = this.figurineService.getFigurineList();
+  }
 
 }
