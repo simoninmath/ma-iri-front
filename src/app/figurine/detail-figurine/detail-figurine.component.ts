@@ -19,7 +19,7 @@ export class DetailFigurineComponent {
     private figurineService: FigurineService) {}  // DI for figurineService
 
   ngOnInit() {
-    const figurineId: string | null = this.route.snapshot.paramMap.get("id");  // Delete const FIGURINES
+    const figurineId: string | null = this.route.snapshot.paramMap.get("id");
     if (figurineId) {  
       this.figurine = this.figurineService.getFigurineById(+figurineId);
     }

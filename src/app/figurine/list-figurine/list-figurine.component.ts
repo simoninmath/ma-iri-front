@@ -12,7 +12,7 @@ import { FigurineService } from '../figurine.service';
 
 export class ListFigurineComponent {
 
-  figurineList: Figurine[];  // Type as a Table of Figurine
+  figList: Figurine[];  // Type as a Table of Figurine
 
   constructor(
     private router: Router,
@@ -24,7 +24,7 @@ export class ListFigurineComponent {
   };
 
   ngOnInit() {
-    this.figurineList = this.figurineService.getFigurineList();
+    this.figList = this.figurineService.getFigurineList();
   }
 
 }
