@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-page-not-found',
   template: `
     <div class="center">
-      <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/035.png" />
       <h1>Hey ! Cette page n'existe pas !</h1>
+      <img src="https://3dminis-factory.com/45293-thickbox_default/alien-stingray-eggs-protect.jpg" />
       <a routerLink="/figurine" class="waves-effect waves-teal btn-flat">Retour à l'accueil</a>
     </div>
   `,

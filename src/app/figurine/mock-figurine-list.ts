@@ -26,7 +26,7 @@ export const FIGURINES: Figurine[] = [
         hp: 21,
         cp: 4,
         picture: "https://3dminis-factory.com/62970-thickbox_default/mecha-guardian-standing.jpg",
-        types: ["Mech"],
+        types: ["Droid"],
         created: new Date()
     },
     {
@@ -71,7 +71,7 @@ export const FIGURINES: Figurine[] = [
         hp: 16,
         cp: 4,
         picture: "https://3dminis-factory.com/57483-thickbox_default/plague-annihilator-mech.jpg",
-        types: ["Mech"],
+        types: ["Droid"],
         created: new Date()
     },
     {
@@ -98,7 +98,7 @@ export const FIGURINES: Figurine[] = [
         hp: 25,
         cp: 5,
         picture: "https://3dminis-factory.com/57389-thickbox_default/sword-head-kaiju.jpg",
-        types: ["Kaiju"],
+        types: ["Beast"],
         created: new Date()
     },
     {

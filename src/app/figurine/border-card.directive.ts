@@ -5,8 +5,8 @@ import { Directive, ElementRef, HostListener, Input } from "@angular/core";
 })
 export class BorderCardDirective {
   private initialColor: string = "#f5f5f5"; // White
-  private defaultColor: string = "#009688"; // Green
-  private defaultHeight: number = 180;
+  private defaultColor: string = "#343b48"; // Green
+  private defaultHeight: number = 205;
 
   constructor(private el: ElementRef) {
     // DOM reference where the Directive push
