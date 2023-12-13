@@ -15,14 +15,14 @@ export class FigurineTypeColorPipe implements PipeTransform {
       case 'Eau':
         color = 'blue lighten-1';
         break;
-      case 'Plante':
+      case 'Allien':
         color = 'green lighten-1';
         break;
-      case 'Insecte':
-        color = 'brown lighten-1';
+      case 'Beast':
+        color = 'brown lighten-3';
         break;
-      case 'Normal':
-        color = 'grey lighten-3';
+      case 'Cyborg':
+        color = 'grey lighten-1';
         break;
       case 'Vol':
         color = 'blue lighten-3';
@@ -39,8 +39,8 @@ export class FigurineTypeColorPipe implements PipeTransform {
       case 'Electrik':
         color = 'lime accent-1';
         break;
-      case 'Combat':
-        color = 'deep-orange';
+      case 'Human':
+        color = 'deep-orange lighten-3';
         break;
       default:
         color = 'grey';
