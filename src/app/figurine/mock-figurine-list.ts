@@ -7,7 +7,7 @@ export const FIGURINES: Figurine[] = [
         name: "Bulbizarre",
         hp: 25,
         cp: 5,
-        picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
+        picture: "https://3dminis-factory.com/28188-thickbox_default/ogre-witch-hunter.jpg",
         types: ["Plante", "Poison"],
         created: new Date()
     },
