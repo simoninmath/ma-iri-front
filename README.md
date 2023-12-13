@@ -1,6 +1,10 @@
 # Invictus Miniatures Manager
 
-![Screenshot](FigurinesManager.png)
+![Screenshot1](FigurinesManager.png)
+! [Screenshot2] (FigurinesManager2.png)
+
+
+## Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
 
