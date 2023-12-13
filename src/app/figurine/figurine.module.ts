@@ -6,6 +6,7 @@ import { BorderCardDirective } from './border-card.directive';
 import { FigurineTypeColorPipe } from './figurine-type-color.pipe';
 import { RouterModule, Routes } from '@angular/router';
 import { FigurineService } from './figurine.service';
+import { FormsModule } from '@angular/forms';
 
 const figurineRoutes: Routes = [
   { path:'figurine', component: ListFigurineComponent },
@@ -21,6 +22,7 @@ const figurineRoutes: Routes = [
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild(figurineRoutes)
   ],
   providers: [FigurineService]
