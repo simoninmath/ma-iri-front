@@ -1,5 +1,6 @@
 # Invictus Miniatures Manager
 
+![Thumbnail](figurinemanager-thumbnail.jpg)
 ![Screenshot1](FigurinesManager.png)
 ![Screenshot2](FigurineScreenshot2.png)
 
