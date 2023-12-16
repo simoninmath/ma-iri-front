@@ -7,6 +7,7 @@ import { FigurineTypeColorPipe } from './figurine-type-color.pipe';
 import { RouterModule, Routes } from '@angular/router';
 import { FigurineService } from './figurine.service';
 import { FormsModule } from '@angular/forms';
+import { FigurineFormComponent } from './figurine-form/figurine-form.component';
 
 const figurineRoutes: Routes = [
   { path:'figurine', component: ListFigurineComponent },
@@ -18,7 +19,8 @@ const figurineRoutes: Routes = [
     ListFigurineComponent,
     DetailFigurineComponent,
     BorderCardDirective,
-    FigurineTypeColorPipe
+    FigurineTypeColorPipe,
+    FigurineFormComponent
   ],
   imports: [
     CommonModule,
