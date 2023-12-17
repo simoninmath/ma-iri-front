@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-edit-figurine',
   template: `
-    <h2> {{ figurine?.name }} </h2>
+    <h2 class="center"> {{ figurine?.name }} </h2>
     <p *ngIf="figurine" class="center">
       <img [src]="figurine.picture"/>
     </p>
