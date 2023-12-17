@@ -40,7 +40,7 @@ export class FigurineFormComponent implements OnInit {
     return this.figurine.types.includes(type); // includes() return true or false (native JS)
   }
 
-  selectType($event Event, type: string) {  // When user click on checkbox, this method verify if the type selected is available
+  selectType($event: Event, type: string) {  // When user click on checkbox, this method verify if the type selected is available
     const isChecked: boolean = ($event.target as HTMLInputElement).checked; // get the DOM event to verify if the box is checked and update @Input, plus cast in HTMLInputElement
   
     if(isChecked) { // add the type checked into Figurine[]
