@@ -1,4 +1,7 @@
-<form *ngIf="figurine" (ngSubmit)="onSubmit()" #pokemonForm="ngForm">
+<!-- *ngIf: condition, if type is valid the form may work -->
+<!-- (ngSubmit): event, run the onSubmit() method -->
+<!-- #figurineForm: referenced variable, target the DOM element and attribut result of the ngForm Directive, then become an Angular Object -->
+<form *ngIf="figurine" (ngSubmit)="onSubmit()" #figurineForm="ngForm">  
   <div class="row">
     <div class="col s8 offset-s2">
       <div class="card-panel">
@@ -6,15 +9,17 @@
         <!-- figurine name -->
         <div class="form-group">
           <label for="name">Nom</label>
+          <!-- validation rules -->
           <input type="text" class="form-control" id="name"
                   required
                   pattern="^[a-zA-Z0-9àéèç]{1,25}$"
                  [(ngModel)]="figurine.name" name="name"
-                 #name="ngModel">
-  
-          <div [hidden]="name.valid || name.pristine"
+                 #name="ngModel"> <!-- Declared Variable: keep the result of ngModel Directive -->
+          
+                 <!-- error message if the validation rules are not respected. Hidden state until name is valid or first use (pristine) -->
+          <div [hidden]="name.valid || name.pristine" 
                 class="card-panel red accent-1">
-                Le nom du pokémon est requis (1-25).
+                Le nom de la figurine est requis (1-25).
           </div>
         </div>
   
@@ -28,7 +33,7 @@
                  #hp="ngModel">
            <div [hidden]="hp.valid || hp.pristine"
                  class="card-panel red accent-1">
-                 Les points de vie du pokémon sont compris entre 0 et 999.
+                 Les points de vie de la figurine sont compris entre 0 et 999.
            </div>
         </div>
   
@@ -42,7 +47,7 @@
                  #cp="ngModel">
            <div [hidden]="cp.valid || cp.pristine"
                  class="card-panel red accent-1">
-                 Les dégâts du pokémon sont compris entre 0 et 99.
+                 Les dégâts de la figurine sont compris entre 0 et 99.
            </div>
         </div>
   
@@ -72,12 +77,13 @@
         <div class="section center">
           <button type="submit"
             class="waves-effect waves-light btn"
-            [disabled]="!pokemonForm.form.valid">
-            Valider</button>
+            [disabled]="!figurineForm.form.valid">
+            Valider</button> <!-- If the type selected is invalid, the button stay disable -->
         </div>
   
       </div>
     </div>
   </div>
 </form>
-<h3 *ngIf="!figurine" class="center">Aucun pokémon à éditer...</h3>
+<!-- Condition: if type is NOT valid, the message below appears -->
+<h3 *ngIf="!figurine" class="center">Aucun figurine à éditer...</h3> 

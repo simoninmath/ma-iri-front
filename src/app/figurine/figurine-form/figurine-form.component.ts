@@ -6,7 +6,7 @@ import { Router } from "@angular/router";
 @Component({
   selector: "app-figurine-form",
   templateUrl: "./figurine-form.component.html",
-  styles: [],
+  styleUrls: ['./figurine-form.component.scss'],
 })
 
 export class FigurineFormComponent implements OnInit {
@@ -23,9 +23,18 @@ export class FigurineFormComponent implements OnInit {
     this.types = this.figurineService.getFigurineTypeList();
   }
 
-  // isTypesValid(type: string): boolean {
-  //   return true;
-  // }
+  isTypesValid(type: string): boolean {
+    
+    if(this.figurine.types.length == 1 && this.hasType(type)){  // if figurine has one type on the current card, the checkbox is disable 
+      return false;
+    }
+
+    if(this.figurine.types.length > 2 && !this.hasType(type)){ 
+      return false;
+    }
+
+    return true;
+  }
 
   hasType(type: string) { // Ask is the Type in parameter exist in types table
     return this.figurine.types.includes(type); // includes() return true or false (native JS)
@@ -45,6 +54,5 @@ export class FigurineFormComponent implements OnInit {
 
   onSubmit() {
     console.log('Form submited');
-    this.router.navigate(['/figurine', this.figurine.id]); // push to the router URL and figurine id
   }
 }

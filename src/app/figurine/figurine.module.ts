@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FigurineService } from './figurine.service';
 import { FormsModule } from '@angular/forms';
 import { FigurineFormComponent } from './figurine-form/figurine-form.component';
+import { EditFigurineComponent } from './edit-figurine/edit-figurine.component';
 
 const figurineRoutes: Routes = [
   { path:'figurine', component: ListFigurineComponent },
@@ -20,7 +21,8 @@ const figurineRoutes: Routes = [
     DetailFigurineComponent,
     BorderCardDirective,
     FigurineTypeColorPipe,
-    FigurineFormComponent
+    FigurineFormComponent,
+    EditFigurineComponent
   ],
   imports: [
     CommonModule,
