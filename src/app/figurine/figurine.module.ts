@@ -11,6 +11,7 @@ import { FigurineFormComponent } from './figurine-form/figurine-form.component';
 import { EditFigurineComponent } from './edit-figurine/edit-figurine.component';
 
 const figurineRoutes: Routes = [
+  { path:'edit/figurine/:id', component: EditFigurineComponent },
   { path:'figurine', component: ListFigurineComponent },
   { path:'figurine/:id', component: DetailFigurineComponent }
 ];
