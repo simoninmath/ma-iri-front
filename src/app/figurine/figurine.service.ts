@@ -5,6 +5,7 @@ import { FIGURINES } from "./mock-figurine-list";
 @Injectable()  // Delete providedIn: 'root' to use Service only in FigurineModule
 
 export class FigurineService {
+  
   getFigurineList(): Figurine[] {  // Return Type is a table of figurine named FIGURINES
     return FIGURINES;
   }
@@ -15,10 +16,11 @@ export class FigurineService {
 
   getFigurineTypeList(): string[] {
     return [
-      'Meca',
-      'Aqua',
-      'Terra',
-      'Etc...'
+      'Cybord',
+      'Droid',
+      'Human',
+      'Beast',
+      'Allien'
     ];
   }
 }
