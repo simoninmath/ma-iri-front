@@ -28,4 +28,8 @@ export class DetailFigurineComponent {
   goToFigurineList() {
     this.router.navigate(['/figurine']);
   }
+
+  goToEditFigurine(figurine: Figurine){
+     this.router.navigate(['edit/figurine', figurine.id]);
+  }
 }
