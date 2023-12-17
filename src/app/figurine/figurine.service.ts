@@ -7,9 +7,7 @@ import { Observable, catchError, of, tap } from "rxjs";
 
 export class FigurineService {
   
-  constructor(
-    private http: HttpClient
-  ){}
+  constructor(private http: HttpClient){}
 
   getFigurineList(): Observable<Figurine[]> {  // Return an Observable because the Object Figurine[] will be receive later
     return this.http.get<Figurine[]>('api/figurine').pipe(  // Making a HTTP Request that return an Object Observable with URL

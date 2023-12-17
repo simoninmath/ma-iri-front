@@ -29,7 +29,7 @@ export class ListFigurineComponent {
   }
 
   // ngOnInit() {
-  //   this.figList = this.figurineService.getFigurineList();
+  //   this.figurineList = this.figurineService.getFigurineList();
   // }
 
 }

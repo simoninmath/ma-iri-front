@@ -9,6 +9,7 @@ import { FIGURINES } from './figurine/mock-figurine-list';
 export class InMemoryDataService implements InMemoryDataService {
 
   createDb() {
-    return { FIGURINES };
+    const figurine = FIGURINES;  // We cannot pass a const from an other file, we need to reassign it in createDb Method
+    return { figurine };
   }
 }
