@@ -1,8 +1,8 @@
 # Invictus Miniatures Manager
 
-![Thumbnail](figurinemanager-thumbnail.jpg)
-![Screenshot1](FigurinesManager.png)
-![Screenshot2](FigurineScreenshot2.png)
+![Thumbnail](src/assets/img/figurinemanager-thumbnail.jpg)
+![Screenshot1](src/assets/img/FigurinesManager.png)
+![Screenshot2](src/assets/img/FigurineScreenshot2.png)
 
 
 ## Project
