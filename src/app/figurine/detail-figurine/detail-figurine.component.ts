@@ -18,12 +18,21 @@ export class DetailFigurineComponent {
     private router: Router,  // Dependence Injection allow the Route Service disable into the Component
     private figurineService: FigurineService) {}  // DI for figurineService
 
+  // Refactoring
   ngOnInit() {
     const figurineId: string | null = this.route.snapshot.paramMap.get("id");
-    if (figurineId) {  
-      this.figurine = this.figurineService.getFigurineById(+figurineId);
+    if(figurineId) {
+      this.figurineService.getFigurineById(+figurineId)
+      .subscribe(figurine => this.figurine = figurine);
     }
   }
+
+  // ngOnInit() {
+  //   const figurineId: string | null = this.route.snapshot.paramMap.get("id");
+  //   if (figurineId) {  
+  //     this.figurine = this.figurineService.getFigurineById(+figurineId);
+  //   }
+  // }
 
   goToFigurineList() {
     this.router.navigate(['/figurine']);
