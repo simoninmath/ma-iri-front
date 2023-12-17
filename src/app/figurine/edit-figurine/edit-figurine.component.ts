@@ -27,13 +27,20 @@ export class EditFigurineComponent implements OnInit {
   // Get the URL and figurine id, if it's right, return the selected figurine, else undefined
   ngOnInit() {
     const figurineId: string | null = this.route.snapshot.paramMap.get('id');
-  
     if(figurineId) {
-      this.figurine = this.figurineService.getFigurineById(+figurineId);
-    } else {
-      this.figurine = undefined;
+      this.figurineService.getFigurineById(+figurineId)
+      .subscribe(figurine => this.figurine = figurine);
     }
 
-  }
+  // ngOnInit() {
+  //   const figurineId: string | null = this.route.snapshot.paramMap.get('id');
+  
+  //   if(figurineId) {
+  //     this.figurine = this.figurineService.getFigurineById(+figurineId);
+  //   } else {
+  //     this.figurine = undefined;
+  //   }
 
+  // }
+  }
 }
