@@ -12,7 +12,7 @@ import { FigurineService } from '../figurine.service';
 
 export class ListFigurineComponent {
 
-  figList: Figurine[];  // Type as a Table of Figurine
+  figurineList: Figurine[];  // Type as a Table of Figurine
 
   constructor(
     private router: Router,
@@ -24,7 +24,12 @@ export class ListFigurineComponent {
   };
 
   ngOnInit() {
-    this.figList = this.figurineService.getFigurineList();
+    this.figurineService.getFigurineList()  // Get an Observable from Service
+    .subscribe(figurineList => this.figurineList = figurineList);  // Fallow this Observable to get the figurine list and push it on the Component property 
   }
+
+  // ngOnInit() {
+  //   this.figList = this.figurineService.getFigurineList();
+  // }
 
 }
