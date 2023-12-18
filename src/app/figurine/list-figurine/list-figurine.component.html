@@ -1,5 +1,8 @@
 <div class="container">
     <div class="row">
+
+      <app-search-figurine></app-search-figurine>
+
       <div *ngFor="let figurine of figurineList" class="col m4 s6">
         <div (click)="goToFigurine(figurine)" class="card horizontal" figBorderCard>
           <div class="card-image">

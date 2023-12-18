@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { FigurineFormComponent } from './figurine-form/figurine-form.component';
 import { EditFigurineComponent } from './edit-figurine/edit-figurine.component';
 import { AddFigurineComponent } from './add-figurine/add-figurine.component';
+import { SearchFigurineComponent } from './search-figurine/search-figurine.component';
 
 const figurineRoutes: Routes = [
   { path:'edit/figurine/:id', component: EditFigurineComponent },
@@ -26,7 +27,8 @@ const figurineRoutes: Routes = [
     FigurineTypeColorPipe,
     FigurineFormComponent,
     EditFigurineComponent,
-    AddFigurineComponent
+    AddFigurineComponent,
+    SearchFigurineComponent
   ],
   imports: [
     CommonModule,
