@@ -23,6 +23,24 @@
           </div>
         </div>
   
+
+        <!-- figurine picture -->
+        <div *ngIf="isAddForm" class="form-group">
+          <label for="picture">Image</label>
+          <!-- validation rules -->
+          <input type="url" class="form-control" id="picture"
+                 required
+                 [(ngModel)]="figurine.picture" name="picture"
+                 #picture="ngModel"> <!-- Declared Variable: keep the result of ngModel Directive -->
+          
+                 <!-- error message if the validation rules are not respected. Hidden state until name is valid or first use (pristine) -->
+          <div [hidden]="picture.valid || picture.pristine" 
+                class="card-panel red accent-1">
+                Picture required.
+          </div>
+        </div>
+
+
         <!-- figurine hp -->
         <div class="form-group">
           <label for="hp">Point de vie</label>
