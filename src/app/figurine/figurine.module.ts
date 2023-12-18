@@ -9,6 +9,7 @@ import { FigurineService } from './figurine.service';
 import { FormsModule } from '@angular/forms';
 import { FigurineFormComponent } from './figurine-form/figurine-form.component';
 import { EditFigurineComponent } from './edit-figurine/edit-figurine.component';
+import { AddFigurineComponent } from './add-figurine/add-figurine.component';
 
 const figurineRoutes: Routes = [
   { path:'edit/figurine/:id', component: EditFigurineComponent },
@@ -23,7 +24,8 @@ const figurineRoutes: Routes = [
     BorderCardDirective,
     FigurineTypeColorPipe,
     FigurineFormComponent,
-    EditFigurineComponent
+    EditFigurineComponent,
+    AddFigurineComponent
   ],
   imports: [
     CommonModule,

@@ -34,6 +34,11 @@ export class DetailFigurineComponent {
   //   }
   // }
 
+  deleteFigurine(figurine: Figurine){
+    this.figurineService.deleteFigurineById(figurine.id)
+    .subscribe(() => this.goToFigurineList());
+  }
+
   goToFigurineList() {
     this.router.navigate(['/figurine']);
   }

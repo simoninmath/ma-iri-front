@@ -52,7 +52,21 @@ export class FigurineFormComponent implements OnInit {
 
   }
 
+  // Refactoring
   onSubmit() {
-    console.log('Form submited');
+    this.figurineService.updateFigurine(this.figurine)
+    .subscribe(() => this.router.navigate(['/figurine', this.figurine.id]));
   }
+  
+  // onSubmit() {
+  //   this.figurineService.updateFigurine(this.figurine)
+  //   .subscribe((figurine) => { 
+  //     if(figurine) {
+  //       this.router.navigate(['/figurine', this.figurine.id]);
+  //     } else {
+  //       //TODO include snackbar with error message
+  //     }
+  // })
+  // }
+
 }

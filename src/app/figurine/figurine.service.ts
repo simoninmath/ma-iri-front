@@ -61,14 +61,32 @@ export class FigurineService {
     return of(errorValue); 
   }
 
-  updateFigurine(figurine: Figurine): Observable<Figurine | undefined> {
+  updateFigurine(figurine: Figurine): Observable<null> {  // In Memory API force to use null Object instead of <Figurine | undefined>
     const httpOptions = {
       headers: new HttpHeaders({'Content-Type': 'application/json'})
     };
   
     return this.http.put<Figurine>('api/figurine', figurine, httpOptions).pipe(
       tap((response) => this.log(response)),
-      catchError((error) => this.handleError(error, undefined))
+      catchError((error) => this.handleError(error, null))
+    );
+  }
+
+  deleteFigurineById(figurineId: number): Observable<null> {
+    return this.http.delete<null>(`api/figurine/${figurineId}`).pipe(
+      //tap((response) => this.log(response)),
+      catchError((error) => this.handleError(error, null))
+    );
+  }
+
+  addFigurine(figurine: Figurine): Observable<null> {
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+    
+    return this.http.post('api/figurine', figurine, httpOptions).pipe(
+      // tap((response) => this.log(response)),
+      catchError((error) => this.handleError(error, null))
     );
   }
 
