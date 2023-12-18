@@ -1,15 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Figurine } from '../figurine';
 
 @Component({
   selector: 'app-add-figurine',
   template: `
-    <p>
-      add-figurine works!
-    </p>
+    <h2 class="center">Create your own fig!</h2>
+    <app-figurine-form [figurine]="figurine"></app-figurine-form>
   `,
   styles: [
   ]
 })
-export class AddFigurineComponent {
+export class AddFigurineComponent implements OnInit {
+  
+  figurine: Figurine;
+
+  // Create an empty figurine that user can fill
+  ngOnInit() {
+    this.figurine = new Figurine();
+  }
 
 }
