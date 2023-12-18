@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Figurine } from "./figurine";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, catchError, of, tap } from "rxjs";
 
 @Injectable()  // Delete providedIn: 'root' to use Service only in FigurineModule
@@ -59,6 +59,17 @@ export class FigurineService {
   private handleError(error: Error, errorValue: any){
     console.error(error);
     return of(errorValue); 
+  }
+
+  updateFigurine(figurine: Figurine): Observable<Figurine | undefined> {
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+  
+    return this.http.put<Figurine>('api/figurine', figurine, httpOptions).pipe(
+      tap((response) => this.log(response)),
+      catchError((error) => this.handleError(error, undefined))
+    );
   }
 
   getFigurineTypeList(): string[] {
