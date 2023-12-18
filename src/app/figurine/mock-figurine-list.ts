@@ -4,7 +4,7 @@ import { Figurine } from '../figurine/figurine';
 export const FIGURINES: Figurine[] = [
     {
         id: 1,
-        name: "Cyborg Hive Queen Walking",
+        name: "Hive Queen Walking",
         hp: 25,
         cp: 5,
         picture: "https://3dminis-factory.com/62996-thickbox_default/cyborg-hive-queen-walking.jpg",
@@ -13,7 +13,7 @@ export const FIGURINES: Figurine[] = [
     },
     {
         id: 2,
-        name: "Cyborg Hive Queen Rule",
+        name: "Hive Queen Rule",
         hp: 28,
         cp: 6,
         picture: "https://3dminis-factory.com/62994-large_default/cyborg-hive-queen-rule.jpg",
@@ -22,7 +22,7 @@ export const FIGURINES: Figurine[] = [
     },
     {
         id: 3,
-        name: "Mecha Guardian Standing",
+        name: "Guardian Standing",
         hp: 21,
         cp: 4,
         picture: "https://3dminis-factory.com/62970-thickbox_default/mecha-guardian-standing.jpg",
@@ -31,7 +31,7 @@ export const FIGURINES: Figurine[] = [
     },
     {
         id: 4,
-        name: "Assassin Droid Jumping",
+        name: "Assassin Jumping",
         hp: 16,
         cp: 2,
         picture: "https://3dminis-factory.com/62952-large_default/assassin-droid-jumping.jpg",
@@ -49,7 +49,7 @@ export const FIGURINES: Figurine[] = [
     },
     {
         id: 6,
-        name: "One Eye Allien Infantry rush",
+        name: "OneEye Infantry",
         hp: 18,
         cp: 6,
         picture: "https://3dminis-factory.com/45201-thickbox_default/one-eye-allien-infantry-rush.jpg",
@@ -58,7 +58,7 @@ export const FIGURINES: Figurine[] = [
     },
     {
         id: 7,
-        name: "Night Vision Infantry pistols",
+        name: "NightVision Infantry",
         hp: 14,
         cp: 5,
         picture: "https://3dminis-factory.com/45205-thickbox_default/night-vision-infantry-pistols.jpg",
@@ -67,7 +67,7 @@ export const FIGURINES: Figurine[] = [
     },
     {
         id: 8,
-        name: "Plague Annihilator Mech",
+        name: "Plague Annihilator",
         hp: 16,
         cp: 4,
         picture: "https://3dminis-factory.com/57483-thickbox_default/plague-annihilator-mech.jpg",
@@ -85,7 +85,7 @@ export const FIGURINES: Figurine[] = [
     },
     {
         id: 10,
-        name: "Mutant Sea Beast",
+        name: "Mutant SeaBeast",
         hp: 19,
         cp: 3,
         picture: "https://3dminis-factory.com/57429-thickbox_default/mutant-sea-beast.jpg",
@@ -94,7 +94,7 @@ export const FIGURINES: Figurine[] = [
     },
     {
         id: 11,
-        name: "Sword Head Kaiju",
+        name: "Sword Head",
         hp: 25,
         cp: 5,
         picture: "https://3dminis-factory.com/57389-thickbox_default/sword-head-kaiju.jpg",
