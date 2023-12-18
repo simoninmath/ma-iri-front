@@ -6,9 +6,7 @@ import { Figurine } from '../figurine';
   template: `
     <h2 class="center">Create your own fig!</h2>
     <app-figurine-form [figurine]="figurine"></app-figurine-form>
-  `,
-  styles: [
-  ]
+  `
 })
 export class AddFigurineComponent implements OnInit {
   

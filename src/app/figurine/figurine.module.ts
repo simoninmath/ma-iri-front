@@ -13,6 +13,7 @@ import { AddFigurineComponent } from './add-figurine/add-figurine.component';
 
 const figurineRoutes: Routes = [
   { path:'edit/figurine/:id', component: EditFigurineComponent },
+  { path:'figurine/add', component: AddFigurineComponent },
   { path:'figurine', component: ListFigurineComponent },
   { path:'figurine/:id', component: DetailFigurineComponent }
 ];

@@ -10,9 +10,9 @@ import { Router } from "@angular/router";
 })
 
 export class FigurineFormComponent implements OnInit {
-  
   @Input() figurine: Figurine; // Indicate the Component property for each instance : to use app-figurine component, we need to pass a Object Figurine first
   types: string[]; // All types in the app
+  isAddForm: boolean;
 
   constructor(
     private figurineService: FigurineService,
@@ -21,6 +21,7 @@ export class FigurineFormComponent implements OnInit {
 
   ngOnInit() {
     this.types = this.figurineService.getFigurineTypeList();
+    this.isAddForm = this.router.url.includes('add');
   }
 
   isTypesValid(type: string): boolean {
@@ -54,8 +55,13 @@ export class FigurineFormComponent implements OnInit {
 
   // Refactoring
   onSubmit() {
-    this.figurineService.updateFigurine(this.figurine)
-    .subscribe(() => this.router.navigate(['/figurine', this.figurine.id]));
+    if(this.isAddForm){
+      this.figurineService.addFigurine(this.figurine)
+      .subscribe((figurine: Figurine) => this.router.navigate(['/figurine', figurine.id])); // Redirect to the new figurine id just created
+    } else {
+      this.figurineService.updateFigurine(this.figurine)
+      .subscribe(() => this.router.navigate(['/figurine', this.figurine.id]));
+    }
   }
   
   // onSubmit() {

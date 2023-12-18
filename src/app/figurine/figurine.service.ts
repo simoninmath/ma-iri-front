@@ -79,12 +79,12 @@ export class FigurineService {
     );
   }
 
-  addFigurine(figurine: Figurine): Observable<null> {
+  addFigurine(figurine: Figurine): Observable<Figurine> {
     const httpOptions = {
       headers: new HttpHeaders({'Content-Type': 'application/json'})
     };
     
-    return this.http.post('api/figurine', figurine, httpOptions).pipe(
+    return this.http.post<Figurine>('api/figurine', figurine, httpOptions).pipe( // This Method return a Figurine Type Object with cast "<Figurine>"
       // tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, null))
     );
