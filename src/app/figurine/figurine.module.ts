@@ -11,6 +11,7 @@ import { FigurineFormComponent } from './figurine-form/figurine-form.component';
 import { EditFigurineComponent } from './edit-figurine/edit-figurine.component';
 import { AddFigurineComponent } from './add-figurine/add-figurine.component';
 import { SearchFigurineComponent } from './search-figurine/search-figurine.component';
+import { LoaderComponent } from './loader/loader.component';
 
 const figurineRoutes: Routes = [
   { path:'edit/figurine/:id', component: EditFigurineComponent },
@@ -28,7 +29,8 @@ const figurineRoutes: Routes = [
     FigurineFormComponent,
     EditFigurineComponent,
     AddFigurineComponent,
-    SearchFigurineComponent
+    SearchFigurineComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,

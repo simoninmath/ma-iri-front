@@ -91,6 +91,11 @@ export class FigurineService {
   }
 
   searchFigurineList(term: string): Observable<Figurine[]> { // Request a name with term enter by user
+    // If the research term is too small, return an empty Table to avoid call Server
+    if(term.length <= 1){
+      return of([]);
+    }
+    
     return this.http.get<Figurine[]>(`api/figurine/?name=${term}`).pipe(
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, [])) // If there is an error in the term, return an empty Table

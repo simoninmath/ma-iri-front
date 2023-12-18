@@ -104,4 +104,6 @@
   </div>
 </form>
 <!-- Condition: if type is NOT valid, the message below appears -->
-<h3 *ngIf="!figurine" class="center">Aucun figurine à éditer...</h3> 
+<h3 *ngIf="!figurine" class="center">
+  <app-loader></app-loader>
+</h3> 
