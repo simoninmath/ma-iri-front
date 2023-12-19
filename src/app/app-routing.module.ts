@@ -4,9 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 
 const mainRoutes: Routes = [
-  { path:'', redirectTo: 'login', pathMatch: 'full' },  // Defautl Route with pathMath to avoid "side effects"
-  { path:'login', component: LoginComponent },
-  { path:'**', component: PageNotFoundComponent }
+  { path:'', title: 'Figurine Manager', redirectTo: 'login', pathMatch: 'full' },  // Defautl Route with pathMath to avoid "side effects"
+  { path:'login', title: 'Figurine Manager', component: LoginComponent },
+  { path:'**', title: 'Figurine Manager', component: PageNotFoundComponent }
 ];
 
 @NgModule({

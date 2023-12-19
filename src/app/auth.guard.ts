@@ -2,7 +2,7 @@ import { inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
 
-// Refactoring
+// Refactored with Guard Function and inject()
 export const AuthGuard = () => {
   const authService = inject(AuthService);
   const router = inject(Router);
@@ -15,7 +15,7 @@ export const AuthGuard = () => {
   return false;
 }
 
-
+// Older way to define Guard with CanActivate (depreciated)
 /* @Injectable({
   providedIn: 'root'
 })
