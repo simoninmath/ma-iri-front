@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Figurine } from '../figurine';
 import { FigurineService } from '../figurine.service';
 import { ActivatedRoute } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-edit-figurine',
@@ -22,15 +23,20 @@ export class EditFigurineComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private figurineService: FigurineService
+    private figurineService: FigurineService,
+    private title: Title
   ){}
+
   // Get the URL and figurine id, if it's right, return the selected figurine, else undefined
   ngOnInit() {
     const figurineId: string | null = this.route.snapshot.paramMap.get('id');
     if(figurineId) {
-      this.figurineService.getFigurineById(+figurineId)
-      .subscribe(figurine => this.figurine = figurine);
-    }
+      this.figurineService.getFigurineById(+figurineId).subscribe(figurine => {  // Get dynamic titles in edit section
+        this.figurine = figurine;
+        this.initTitle(figurine);
+  });
+  }
+}
 
   // ngOnInit() {
   //   const figurineId: string | null = this.route.snapshot.paramMap.get('id');
@@ -40,7 +46,14 @@ export class EditFigurineComponent implements OnInit {
   //   } else {
   //     this.figurine = undefined;
   //   }
-
   // }
+
+  initTitle(figurine: Figurine | undefined){
+    if(!figurine){
+      this.title.setTitle('This Figurine doesn\'t exist...');
+      return;
+    }
+    this.title.setTitle(figurine.name);
   }
+
 }
