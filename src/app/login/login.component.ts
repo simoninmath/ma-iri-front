@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   ]
 })
 export class LoginComponent implements OnInit {
-message: string = 'Vous êtes déconnecté !';
+message: string = 'Status: Disconnect';
 name: string;
 password: string;
 auth: AuthService;
@@ -27,7 +27,7 @@ setMessage() {
   if(this.auth.isLoggedIn){
     this.message = 'Connexion status: connected';
   } else {
-    this.message = 'Wrond id or password!';
+    this.message = 'Wrong id or password!';
   }
 }
 
