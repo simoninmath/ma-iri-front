@@ -31,7 +31,6 @@ export class DetailFigurineComponent {
   });
  }
 }
-
   // ngOnInit() {
   //   const figurineId: string | null = this.route.snapshot.paramMap.get("id");
   //   if (figurineId) {  
