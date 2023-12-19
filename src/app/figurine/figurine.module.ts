@@ -15,10 +15,10 @@ import { LoaderComponent } from './loader/loader.component';
 import { AuthGuard } from '../auth.guard';
 
 const figurineRoutes: Routes = [
-  { path:'edit/figurine/:id', component: EditFigurineComponent, canActivate: [AuthGuard] },
-  { path:'figurine/add', component: AddFigurineComponent, canActivate: [AuthGuard] },
-  { path:'figurine', component: ListFigurineComponent, canActivate: [AuthGuard] },
-  { path:'figurine/:id', component: DetailFigurineComponent, canActivate: [AuthGuard] }
+  { path:'edit/figurine/:id', title: 'Edit Figurine', component: EditFigurineComponent, canActivate: [AuthGuard] },
+  { path:'figurine/add', title: 'Add Figurine', component: AddFigurineComponent, canActivate: [AuthGuard] },
+  { path:'figurine', title: 'Figurine Manager', component: ListFigurineComponent, canActivate: [AuthGuard] },
+  { path:'figurine/:id', title: 'Figurine Manager', component: DetailFigurineComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
