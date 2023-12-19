@@ -11,7 +11,7 @@ export class AuthService {
 
   // Login is a default asynchronous operation, so we need to use Observable
   logIn(name: string, password: string): Observable<boolean> {
-    const isLoggedIn = (name == 'pikachu' && password == 'pikachu');
+    const isLoggedIn = (name == 'figurine' && password == 'figurine');
   
   // Simulate server answer with delay
   return of(isLoggedIn).pipe(
