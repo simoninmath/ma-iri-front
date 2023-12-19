@@ -12,12 +12,13 @@ import { EditFigurineComponent } from './edit-figurine/edit-figurine.component';
 import { AddFigurineComponent } from './add-figurine/add-figurine.component';
 import { SearchFigurineComponent } from './search-figurine/search-figurine.component';
 import { LoaderComponent } from './loader/loader.component';
+import { AuthGuard } from '../auth.guard';
 
 const figurineRoutes: Routes = [
-  { path:'edit/figurine/:id', component: EditFigurineComponent },
-  { path:'figurine/add', component: AddFigurineComponent },
-  { path:'figurine', component: ListFigurineComponent },
-  { path:'figurine/:id', component: DetailFigurineComponent }
+  { path:'edit/figurine/:id', component: EditFigurineComponent, canActivate: [AuthGuard] },
+  { path:'figurine/add', component: AddFigurineComponent, canActivate: [AuthGuard] },
+  { path:'figurine', component: ListFigurineComponent, canActivate: [AuthGuard] },
+  { path:'figurine/:id', component: DetailFigurineComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
