@@ -6,6 +6,7 @@ import { FIGURINES } from './figurine/mock-figurine-list';
 @Injectable({
   providedIn: 'root'
 })
+
 export class InMemoryDataService implements InMemoryDataService {
 
   createDb() {
