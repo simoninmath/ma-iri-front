@@ -7,7 +7,7 @@ export class Figurine {
   types: string[];
   created:  Date;
 
-  // Define default value for a figurine Object 
+  // Define default value for figurine Object 
   constructor(
     name: string = 'Enter a name',
     hp: number = 100,
