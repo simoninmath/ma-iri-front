@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styles: [
   ]
 })
+
 export class LoginComponent implements OnInit {
 message: string = 'Status: Disconnect';
 name: string;
