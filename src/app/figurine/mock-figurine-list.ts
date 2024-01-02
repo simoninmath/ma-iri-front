@@ -1,4 +1,3 @@
-/* Chapitre 2 : Les Composants */
 import { Figurine } from '../figurine/figurine';
   
 export const FIGURINES: Figurine[] = [
