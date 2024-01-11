@@ -38,7 +38,9 @@ const figurineRoutes: Routes = [
     FormsModule,
     RouterModule.forChild(figurineRoutes)
   ],
-  providers: [FigurineService]
+  providers: [
+    FigurineService
+  ]
 })
 
 export class FigurineModule { }

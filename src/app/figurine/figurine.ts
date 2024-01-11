@@ -12,7 +12,7 @@ export class Figurine {
     name: string = 'Enter a name',
     hp: number = 100,
     cp: number = 10,
-    picture: string = 'https://3dminis-factory.com/science-fiction/invictus-miniatures/jungle-assault/xxx.jpg',
+    picture: string = '',
     types: string[] = ['Human'],
     created: Date = new Date
     ){

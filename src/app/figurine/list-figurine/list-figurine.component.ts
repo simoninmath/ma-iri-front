@@ -19,7 +19,7 @@ export class ListFigurineComponent {
     private figurineService: FigurineService
     ) {}
     
-  goToFigurine(figurine: Figurine) {   // Go back Method
+  goToFigurine(figurine: Figurine) {
     this.router.navigate(['/figurine', figurine.id]);
   };
 
