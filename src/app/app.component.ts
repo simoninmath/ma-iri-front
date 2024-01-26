@@ -8,5 +8,5 @@ import { Component } from "@angular/core";
 })
 
 export class AppComponent {
-  title = "Invictus Miniatures";
+  title = "Ma-iri Figurine Manager";
 }

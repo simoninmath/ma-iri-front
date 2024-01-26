@@ -1,4 +1,4 @@
-# Invictus Miniatures Manager
+# Ma-iri Figurine Manager
 
 ![Thumbnail](src/assets/img/figurinemanager-thumbnail.jpg)
 ![Screenshot1](src/assets/img/FigurinesManager.png)

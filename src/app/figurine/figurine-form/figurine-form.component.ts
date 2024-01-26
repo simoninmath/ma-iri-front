@@ -10,7 +10,7 @@ import { Router } from "@angular/router";
 })
 
 export class FigurineFormComponent implements OnInit {
-  @Input() figurine: Figurine; // Indicate the Component property for each instance : to use app-figurine component, we need to pass a Object Figurine first
+  @Input() figurine: Figurine; // Indicate the Component property for each instance: to use app-figurine component, we need to pass a Object Figurine first
   types: string[]; // All types in the app
   isAddForm: boolean;
 
